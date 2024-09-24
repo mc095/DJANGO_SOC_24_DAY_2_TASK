@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+    <style>
+        /* Center the table */
+        .table-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Course Details</h1>
+    <div class="table-container">
+        <table border="1">
+            <tr>
+                <th>Course Name</th>
+                <th>Course ID</th>
+                <th>Duration</th>
+                <th>Faculty</th>
+            </tr>
+            {% for course in courses_list %}
+            <tr>
+                <td>{{ course.c_name }}</td>
+                <td>{{ course.c_id }}</td>
+                <td>{{ course.c_duration }}</td>
+                <td>{{ course.c_faculty }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
